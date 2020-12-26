@@ -7,7 +7,7 @@ import Header from './component/Layout/Header'
 import Hooks from './component/Hooks'
 import Posts from './component/Redux/Posts'
 import Postform from './component/Redux/Postform';
-import store from './store'
+import store from './component/Redux/store'
 
 function App() {
   
