@@ -13,4 +13,5 @@ const fecthPosts = () => dispatch => {
     
 }
 
+
 export default fecthPosts

@@ -1,0 +1,22 @@
+Theses are my notes on following the process to setting up the boiler plates for redux and understanding redux.
+
+There are first step to note is that the following things redux, react-redux and thunk should be installed, thunk is a middleware application to grant async acess to the store.
+
+Store is the where the root tree of  state is stored, basically where you store your state and is called with the createStore function.
+Before that the first step is to wrap the main App component inside a Provider component that is imported from react-redux and then the store is passed in as a prop.
+
+Store is then created and then takes in three parameters:
+    1. The Reducer: this basically returns the next state tree and an action dispatched to it
+    2. The initial state: the current values of state
+    3. The enhancer : This is middleware application
+
+The next step is to then create the reducers: The reducers as earlier mentioned are used to change the value of state and does this using an action. 
+We then take the next step of creating the action folder that hosts types basically defining a couple constants with the names of the actions that we want to perform to get a new state value then bring it into the reducer
+
+We also want to include the actions files in the action folder, this actions basically are the processes or actions you perform that as a result updates the posts e.g filling a form or something of that nature, The dispatch then returns the action type and then the information to be passed e.g results from a fetch API call etc
+
+The next thing to do is to then evaluate the type of action being performed and update the states accordingly this is done by checking the type of action.
+
+The next thing to do is to import connect to connect the state to the reducers then import the actions file that is used
+
+The next thing is to rather than exporting our parent component, we do that for our imported connect and then place beside it two parenthesis, the later houses the name of parent component and the former houses the actions and then a function called mapStateToProps that does exactly as the name describes, maps the state value from the state to a prop
