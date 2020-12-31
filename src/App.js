@@ -6,20 +6,20 @@ import Todo from './component/Todo/Todo'
 import Header from './component/Layout/Header'
 import Hooks from './component/Hooks'
 
-import Posts from './component/Redux/Posts'
-import Postform from './component/Redux/Postform';
-import store from './component/Redux/store'
+import Posts from './component/Tests/Posts'
+import PostForm from './component/Tests/PostForm';
+import store from './component/Tests/store'
+
 
 function App() {
   
   return (
-    <Provider store={store}>
-      <div>
-        <Header/>
-        <div className="rest">
-          <Postform/>
-          <Posts/>
-        </div>
+    <Provider store={ store }>
+      <div className="App">
+        <br/>
+        <PostForm/>
+        <br/>
+        <Posts />
       </div>
     </Provider>
     

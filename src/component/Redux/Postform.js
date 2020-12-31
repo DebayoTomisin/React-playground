@@ -6,7 +6,7 @@ import { createPost } from './actions/postAction'
 class Postform extends Component{
     constructor(props){
         super(props)
-        this.state ={
+        this.state = {
             title : '',
             body: ''
         }
