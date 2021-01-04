@@ -6,22 +6,23 @@ import Todo from './component/Todo/Todo'
 import Header from './component/Layout/Header'
 import Hooks from './component/Hooks'
 
-import Posts from './component/Tests/Posts'
-import PostForm from './component/Tests/PostForm';
-import store from './component/Tests/store'
+import RTodo from './component/ReduxTodo/RTodo';
+
+import store from './component/ReduxTodo/store'
+
+
 
 
 function App() {
   
   return (
-    <Provider store={ store }>
-      <div className="App">
-        <br/>
-        <PostForm/>
-        <br/>
-        <Posts />
+    <Provider store={store}>
+      <div>
+        <RTodo/>
       </div>
     </Provider>
+    
+    
     
   )
 }
