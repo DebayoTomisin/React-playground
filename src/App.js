@@ -1,14 +1,13 @@
 import { render } from '@testing-library/react';
-import { Provider } from 'react-redux'
-import './App.css';
 
+import { Provider } from 'react-redux'
 import Todo from './component/Todo/Todo'
 import Header from './component/Layout/Header'
 import Hooks from './component/Hooks'
 
 import RTodo from './component/ReduxTodo/RTodo';
 
-import store from './component/ReduxTodo/store'
+import store from './component/Tabs/store'
 
 
 
@@ -18,7 +17,7 @@ function App() {
   return (
     <Provider store={store}>
       <div>
-        <RTodo/>
+        <h3> Mad! </h3>
       </div>
     </Provider>
     
