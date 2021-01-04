@@ -6,7 +6,6 @@ So i tried a bunch of things, watch tutorials over and over again and my conclus
 I understand the general idea of Redux but i'll have to make do with copying the boiler plate setups for now
 
 
-The Tabs folder in the component is an attempt to recreate what i built in the React projects repository only this time i'll be doing it with redux
-Should be a fun ride.
+The Tabs folder in the component is an attempt to recreate what i built in the React projects repository folder 6 only this time i'll be doing it with redux it should be a fun ride.
 
 Thank you!
