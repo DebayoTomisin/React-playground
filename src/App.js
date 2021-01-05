@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import Todo from './component/Todo/Todo'
 import Header from './component/Layout/Header'
 import Hooks from './component/Hooks'
+import Tabs from './component/Tabs'
 
 import RTodo from './component/ReduxTodo/RTodo';
 
@@ -17,7 +18,7 @@ function App() {
   return (
     <Provider store={store}>
       <div>
-        <h3> Mad! </h3>
+        <Tabs/>
       </div>
     </Provider>
     

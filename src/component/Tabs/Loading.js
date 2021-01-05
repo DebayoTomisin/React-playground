@@ -5,3 +5,5 @@ const Loading = () => {
         <div className="section-loading"></div>
     )
 }
+
+export default Loading
