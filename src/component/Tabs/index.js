@@ -3,19 +3,18 @@ import  { connect } from "react-redux"
 import './index.css'
 import PropTypes from 'prop-types'
 
-import { fetchJobs } from './actions/jobAction'
+import { fetchJobs, Loading } from './actions/jobAction'
 
 function Tabs (props){
 
     const [value, setValue] = useState(0)
-    const [loading, setLoading] = useState(true)
-
+    
     useEffect(() => {
-        setLoading(false)
+        props.Loading()
         props.fetchJobs()
     })
 
-    if(loading){
+    if(props.loading){
         return(
             <section className="section loading">
                 <h1>Loading...</h1>
@@ -48,7 +47,8 @@ function Tabs (props){
 }
 
 const mapStatetoProps =  state => ({
-    jobs: state.jobs.jobs 
+    jobs: state.jobs.jobs,
+    loading : state.loading.loading
 })
 
-export default connect (mapStatetoProps, { fetchJobs })(Tabs)
+export default connect (mapStatetoProps, { fetchJobs, Loading })(Tabs)

@@ -12,6 +12,11 @@ function jobReducer (state=initialState, action) {
                 ...state,
                 jobs: action.payload
             }
+        case LOADING:
+            return {
+                ...state,
+                loading: action.payload
+            }
         default:
             return state
     }

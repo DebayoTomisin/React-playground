@@ -18,3 +18,10 @@ export const fetchJobs = () => async (dispatch) => {
     }
     
 }
+
+export const Loading = (value) => dispatch => {
+    dispatch({
+        type: LOADING,
+        payload : !value
+    })
+}
