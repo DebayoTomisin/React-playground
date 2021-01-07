@@ -1,11 +1,7 @@
 Nothing to see here
 Junior developer (at the time of pushing)  just exploring his way with all things react, redux and other technologies that could function alongside the beauty that is react.
 
-Redux is really giving me a hard time mehn won't lie! but more time spent, less cloudy it becomes
-So i tried a bunch of things, watch tutorials over and over again and my conclusion is simple.
-I understand the general idea of Redux but i'll have to make do with copying the boiler plate setups for now
-
-
-The Tabs folder in the component is an attempt to recreate what i built in the React projects repository folder 6 only this time i'll be doing it with redux it should be a fun ride.
+The Tabs folder in the component is an attempt to recreate what i built in the React projects repository folder 6 only this time i'll be doing it with redux it should be a fun ride. So I was able to complete the Tabs project with redux, although some of the states i had to use useState but then the major functionality was fetched with redux which makes a bit more confident with redux. checkout the finals tabs folder for the final code. 
+For sure, i'll be working with boilerplates for redux until i can write it from memory
 
 Thank you!
