@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa'
 import  { connect } from "react-redux"
 import './index.css'
-import PropTypes from 'prop-types'
+
 
 import { fetchJobs } from './actions/jobAction'
 
@@ -14,7 +14,7 @@ function Tabs (props){
     useEffect(() => {
         setLoading(false)
         props.fetchJobs()
-    })
+    }, [])
 
     if(loading){
         return(
@@ -24,6 +24,10 @@ function Tabs (props){
         )
     }
 
+    const {id, title, dates, company, duties} = props.jobs[value]
+    console.log(props.jobs[value])
+    console.log(value)
+
     return(
         <section className="section">
             <div className="title">
@@ -31,10 +35,28 @@ function Tabs (props){
                 <div className="underline"></div>
             </div>
             <div className="jobs-center">
+
                 <div className="btn-container">
-                    
+                    {props.jobs.map((job, index) => {
+                        return(
+                            <button key={job.id} onClick={() => {setValue(index)}}  className={`job-btn ${index === value && `active-btn`}`}>{job.company}</button>
+                        )
+                    })}
                 </div>
                 
+                <article className="job-info">
+                    <h3>{title}</h3>
+                    <h4>{company}</h4>
+                    <p className="job-date">{dates}</p>
+                    {duties.map((duty, index) => {
+                        return(
+                            <div className="job-desc" key={index}>
+                                <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+                                <p>{duty}</p>
+                            </div>
+                        )
+                    })}
+                </article>
             </div>
         </section>
     )
