@@ -1,4 +1,4 @@
-import { FETCH_JOBS, FETCH_COMPANY, LOADING } from '../actions/types'
+import { FETCH_JOBS, FETCH_COMPANY} from '../actions/types'
 
 const url = 'https://course-api.com/react-tabs-project'
 
@@ -19,9 +19,3 @@ export const fetchJobs = () => async (dispatch) => {
     
 }
 
-export const Loading = (value) => dispatch => {
-    dispatch({
-        type: LOADING,
-        payload : !value
-    })
-}
