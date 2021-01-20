@@ -1,65 +1,19 @@
-import {useState} from "react"
+import React from 'react'
+import Basics from './Basics'
+import { Context } from './Context'
+import Test from './Test'
 
-function Todo({todo, index}){
+function Hooks (){
     return(
         <div>
-            <h4>{todo.text}</h4>
-        </div>
-    )
-}
-
-function TodoForm({addTodo}) {
-    const [value, setValue] = useState('')
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        if(!value) return
-        addTodo(value);
-        setValue('')
-    }
-    return(
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                className="input"
-                value={value}
-                onChange= {e => setValue(e.target.value)}
-            />
-        </form>
-    )
-}
-
-function Hooks(){
-    
-    const [todos, setTodos] = useState([
-        
-        {
-            text: "Learn about React",
-            isCompleted : false
-        },
-        {
-            text: "Meet friend for lunch",
-            isCompleted: false
-        },
-        {
-            text: "Build really cool todo app",
-            isCompleted: false
-        }
-    ])
-
-    const addTodo = text => {
-        const newTodos = [...todos, {text}]
-        setTodos(newTodos)
-    }
-    
-    return(
-        <div className="hooks">
-            {todos.map((todo, index) => (
-                <Todo todo={todo} key={index} index={index}/>
-            ))}  
-            <TodoForm addTodo={addTodo}/>         
+            <h4>Bigger everyday!</h4>
+            <Test/>
+            <Context />
         </div>
     )
 }
 
 export default Hooks
+
+// Hooks  are functions that let you "hook" into react state and lifecycle methods from function components
+/* cleaning up after the useEffect basically means returning a function to clean up after the computation done in the main function body an example is the useEffect i use when using setTimeout to clear the timeout after it has been rendered*/
