@@ -24,8 +24,9 @@ function Tabs (props){
         )
     }
 
-    const {id, title, dates, company, duties} = props.jobs[value]
+    const {title, dates, company, duties} = props.jobs[value]
     console.log(props.jobs[value])
+    console.log(props.jobs[value].id)
     console.log(value)
 
     return(

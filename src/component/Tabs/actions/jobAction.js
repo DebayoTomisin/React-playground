@@ -13,7 +13,7 @@ export const fetchJobs = () => dispatch => {
 }
 
 
-const fetchJob = async(dispatch) => {
+const fetchJob = async dispatch => {
     const response = await fetch(url)
     const data = response.json()
     dispatch({
