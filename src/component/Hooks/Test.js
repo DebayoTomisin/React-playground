@@ -5,10 +5,9 @@ const Test = () => {
     const [lastName, setLastName] = useState('')
 
     return(
-        <form>
-            <input type="text" value={firstName} onChange={e => setFirstName(e.target.value)} placeholder="FirstName"/>
-            <input type="text" value={lastName} onChange={e => setLastName(e.target.value)} placeholder="LastName"/>
-        </form>
+        <>
+            <h1>Suzanna</h1>
+        </>
     )
 }
 
