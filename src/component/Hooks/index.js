@@ -2,6 +2,7 @@ import React from 'react'
 import Basics from './Basics'
 import { Context } from './Context'
 import Test from './Test'
+import Themes from './Themes'
 
 function Hooks (){
     return(
@@ -9,6 +10,7 @@ function Hooks (){
             <h4>Bigger everyday!</h4>
             <Test/>
             <Context />
+            <Themes/>
         </div>
     )
 }
