@@ -2,6 +2,7 @@ import React from 'react'
 import Basics from './Basics'
 import { Context } from './Context'
 import Test from './Test'
+import App from './useContext'
 import Themes from './Themes'
 
 function Hooks (){
@@ -11,6 +12,7 @@ function Hooks (){
             <Test/>
             <Context />
             <Themes/>
+            <App/>
         </div>
     )
 }
