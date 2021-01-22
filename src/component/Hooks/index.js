@@ -10,9 +10,8 @@ function Hooks (){
         <div>
             <h4>Bigger everyday!</h4>
             <Test/>
-            <Context />
-            <Themes/>
             <App/>
+            
         </div>
     )
 }

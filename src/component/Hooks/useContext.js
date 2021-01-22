@@ -1,19 +1,20 @@
 import React, { useContext } from "react"
 
 const themes = {
-    light : {
-        foreground : "#00000",
-        background : "#eeeee",
+    light: {
+        foreground: "#000000",
+        background: "#eeeeee"
     },
+
     dark : {
-        foreground: "#fffff",
-        background: "#22222"
+        foreground: "#ffffff",
+        background: "#222222"
     }
-};
+}
 
-const ThemeContext = React.createContext(themes.light)
+const ThemeContext = React.createContext(themes.dark)
 
-function App () {
+function App(){
     return(
         <ThemeContext.Provider value={themes.dark}>
             <Toolbar/>
@@ -23,17 +24,15 @@ function App () {
 
 function Toolbar(props){
     return(
-        <div>
-            <ThemedButton/>
-        </div>
+        <ThemedButton/>
     )
 }
 
 function ThemedButton(){
     const theme = useContext(ThemeContext)
-    return (
-        <button style={{background: theme.background, color:theme.foreground}}>
-            I am styled by theme context
+    return(
+        <button style={{background:theme.background, color: theme.foreground}}>
+            I am the styled component
         </button>
     )
 }
