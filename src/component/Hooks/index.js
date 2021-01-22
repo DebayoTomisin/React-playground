@@ -4,14 +4,19 @@ import { Context } from './Context'
 import Test from './Test'
 import App from './useContext'
 import Themes from './Themes'
+import {ThemedApp} from "./Context"
+import { Counter, TextwithInputFocusButton } from "./Rest"
 
 function Hooks (){
     return(
         <div>
-            <h4>Bigger everyday!</h4>
-            <Test/>
             <App/>
-            
+            <br/>
+            <ThemedApp/>
+            <br/>
+            <Counter/>
+            <br/>
+            <TextwithInputFocusButton/>
         </div>
     )
 }

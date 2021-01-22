@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react'
 
 const ThemeContext = React.createContext('light') // so we create the context object and pass it with a default value
 
@@ -28,6 +28,38 @@ export class ThemedButton extends Component {
         )
     }
 }
+
+const themes = {
+    light: {
+        foreground: "#000000",
+        background: "#eeeeee"
+    },
+
+    dark : {
+        foreground: "#ffffff",
+        background: "#222222"
+    }
+}
+
+const ThemedContext =  React.createContext(themes.dark)
+
+export function ThemedApp(){
+    return(
+        <ThemeContext.Provider value={themes.light}>
+            <ThemesButton/>
+        </ThemeContext.Provider>
+    )
+}
+
+function ThemesButton(){
+    const theme = useContext(ThemedContext)
+    return(
+        <button style={{background: theme.background, color:theme.foreground}}>
+            This is an example of what i wanted to know
+        </button>
+    )
+}
+
 
 
 /* context provides a way to pass data through the component tree without having to pass props down manually at every level. Use a Provider to pass the current theme to the tree below. Any component can read it, no matter how deep it is. In this example, we're passing "dark" as the current value.
