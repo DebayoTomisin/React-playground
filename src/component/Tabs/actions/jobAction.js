@@ -2,7 +2,7 @@ import { FETCH_JOBS, FETCH_COMPANY} from '../actions/types'
 
 const url = 'https://course-api.com/react-tabs-project'
 
-export const fetchJobs = () => dispatch => {
+export const fetchJobs = () => dispatch => { //promises method
     fetch(url)
     .then(res => res.json())
     .then(data => 
@@ -13,7 +13,7 @@ export const fetchJobs = () => dispatch => {
 }
 
 
-const fetchJob = async dispatch => {
+const fetchJob = async dispatch => { // async await method
     const response = await fetch(url)
     const data = response.json()
     dispatch({

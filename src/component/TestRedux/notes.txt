@@ -1,0 +1,14 @@
+Application data flow
+
+1. Initial setup
+	a. create a store, using the root reducer function
+	b. store calls the root reducer and saves the value returned as the inital state
+	c. UI components access the current state of the redux store and use the data gotten to render, also subscribe to any future store updates so they 			know if state has changed
+
+2. Updates:
+	a. something happens in the app.
+	b. The app code disptaches an action to the redux store in response to the chages
+	c. the store runs the reducer function with the current action alongside the previous state and saves the return value as the new state
+	d. store then notifies all UI components that are subscribed to updates
+	e. each UI component checks for the parts of the updated state they need
+	f. the data gotten from the updated state is then re-rendered on the screen for visual effects etc
