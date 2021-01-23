@@ -19,7 +19,7 @@ function App() {
   return (
     <Provider store={store}>
       <div>
-        <Hooks/>
+        <h2>God is good</h2>
       </div>
     </Provider>
     
