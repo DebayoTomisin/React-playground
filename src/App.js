@@ -11,20 +11,14 @@ import RTodo from './component/ReduxTodo/RTodo';
 
 import store from './component/Tabs/store'
 
-
-
+import AccountFetch from "./component/JestScripts/FetchAccount"
 
 function App() {
   
   return (
-    <Provider store={store}>
-      <div>
-        <h2>God is good</h2>
-      </div>
-    </Provider>
-    
-    
-    
+     <div>
+       <AccountFetch/>
+     </div>
   )
 }
 
