@@ -13,10 +13,13 @@ import store from './component/Tabs/store'
 
 import AccountFetch from "./component/JestScripts/FetchAccount"
 
+import Check from "./component/CheckedInput"
+
 function App() {
   
   return (
      <div>
+       <Check/>
        <AccountFetch/>
      </div>
   )
