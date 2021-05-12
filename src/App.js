@@ -18,10 +18,11 @@ import Check from "./component/CheckedInput"
 function App() {
   
   return (
-     <div>
-       <Check/>
-       <AccountFetch/>
-     </div>
+    <>
+      <Provider store={store}>
+       <Tabs/>
+     </Provider>
+    </>
   )
 }
 
