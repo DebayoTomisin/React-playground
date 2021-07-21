@@ -19,9 +19,7 @@ function App() {
   
   return (
     <>
-      <Provider store={store}>
-       <Tabs/>
-     </Provider>
+      <AccountFetch/>
     </>
   )
 }
